@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OfficeBites - Food Ordering System</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+🍽 OfficeBites
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#menu">Menu</a>
+
+<a href="#about">About Us</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<button onclick="showCart()">
+🛒 Cart (<span id="cartCount">0</span>)
+</button>
+
+</header>
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>Smart Food Ordering System</h1>
+
+<p>Premium office food ordering experience</p>
+
+<a href="#menu">
+<button>Explore Menu</button>
+</a>
+
+</div>
+
+</section>
+
+<!-- MENU -->
+
+<section class="menu" id="menu">
+
+<h2 class="title">Popular Meals</h2>
+
+<div class="search-box">
+
+<input type="text"
+id="search"
+placeholder="Search food..."
+onkeyup="searchFood()">
+
+</div>
+
+<div class="items">
+
+<!-- 1 -->
+<div class="card">
+<img src="img/butter-chicken.jpg">
+<h3>Butter Chicken</h3>
+<p>₹320</p>
+<button onclick="add('Butter Chicken',320)">
+Add To Cart
+</button>
+</div>
+
+<!-- 2 -->
+<div class="card">
+<img src="img/c5d262f3377da91a7229772026a2ec5c.jpg">
+<h3>Biryani</h3>
+<p>₹250</p>
+<button onclick="add('Biryani',250)">
+Add To Cart
+</button>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="C:\Users\ishik\OneDrive\Desktop\Project2.0\img\OIP.jpg">
+<h3>Paneer Masala</h3>
+<p>₹220</p>
+<button onclick="add('Paneer Masala',220)">
+Add To Cart
+</button>
+</div>
+
+<!-- 4 -->
+<div class="card">
+<img src="img/dosa.jpg">
+<h3>Masala Dosa</h3>
+<p>₹80</p>
+<button onclick="add('Masala Dosa',80)">
+Add To Cart
+</button>
+</div>
+
+<!-- 5 -->
+<div class="card">
+<img src="img/idli.jpg">
+<h3>Idli</h3>
+<p>₹60</p>
+<button onclick="add('Idli',60)">
+Add To Cart
+</button>
+</div>
+
+<!-- 6 -->
+<div class="card">
+<img src="img/Chole Bhature.jpg">
+<h3>Chole Bhature</h3>
+<p>₹120</p>
+<button onclick="add('Chole Bhature',120)">
+Add To Cart
+</button>
+</div>
+
+<!-- 7 -->
+<div class="card">
+<img src="img/Pav Bhaji.jpg">
+<h3>Pav Bhaji</h3>
+<p>₹100</p>
+<button onclick="add('Pav Bhaji',100)">
+Add To Cart
+</button>
+</div>
+
+<!-- 8 -->
+<div class="card">
+<img src="img/Veg Burger.jpg">
+<h3>Veg Burger</h3>
+<p>₹110</p>
+<button onclick="add('Veg Burger',110)">
+Add To Cart
+</button>
+</div>
+
+<!-- 9 -->
+<div class="card">
+<img src="img/Chicken Roll.jpg">
+<h3>Chicken Roll</h3>
+<p>₹150</p>
+<button onclick="add('Chicken Roll',150)">
+Add To Cart
+</button>
+</div>
+
+<!-- 10 -->
+<div class="card">
+<img src="img/Cold Coffee.jpg">
+<h3>Cold Coffee</h3>
+<p>₹80</p>
+<button onclick="add('Cold Coffee',80)">
+Add To Cart
+</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<h2 class="title">About Us</h2>
+
+<div class="about-box">
+
+<p>
+OfficeBites is a smart online food ordering platform designed for office employees and professionals.
+We provide fresh, delicious and fast meals with a premium digital experience.
+</p>
+
+<p>
+Our mission is to deliver quality food with modern technology and excellent customer experience.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact-box">
+
+<p>📍 Bangalore, India</p>
+
+<p>📞 +91 4638022573</p>
+
+<p>📧 officebites@gmail.com</p>
+
+</div>
+
+</section>
+
+<!-- CART -->
+
+<div id="cart" class="cart">
+
+<div class="cart-header">
+
+<h2>Your Cart</h2>
+
+<button onclick="closeCart()">❌</button>
+
+</div>
+
+<ul id="list"></ul>
+
+<h3 id="total">Total: ₹0</h3>
+
+<button onclick="clearCart()">
+Clear Cart
+</button>
+
+<button class="checkout-btn"
+onclick="checkout()">
+Checkout
+</button>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 OfficeBites | Food Ordering System
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
